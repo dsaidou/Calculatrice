@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(255, 243, 200);
+    overflow: hidden;
+}
+.container-text{
+    border: solid black 1px;
+    float: left;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+}
+
+.text{
+    margin-top: 23%;
+    height: max-content;
+    background-color: rgb(250, 158, 21);    
+    padding: 40px;
+    font-family: 'Montserrat', sans-serif;
+    width: 350px;
+    padding: 50px 40px;
+
+}
+p{
+    text-align: center;
+}
+hr{
+    margin: 20px;
+    height: 2px;
+    background-color: rgb(0,0,0);
+    border: 0;
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    position: relative;
+
+}
+.container-calculator{
+    height: max-content;
+    width: max-content;
+    border-radius: 20px;
+    background-color: rgb(250, 158, 21);
+    overflow: hidden;
+    position: absolute;
+    margin-right: 60px ;
+    
+}
+.buttonContainer{
+    display: grid;
+    grid-template-rows: repeat(5, 80px);
+    grid-template-columns: repeat(4,80px);
+}
+
+.display{
+    margin: 10% 0 10% 10%;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(241, 222, 134, 0.674);
+    border: white solid 1px;
+    font-size: 2em;
+    overflow: hidden;
+}
+
+.buttonContainer button{
+    color: white;
+    border-radius: 10%;
+    margin: 10px;
+    border: rgba(255, 255, 255, 0.3) solid 1px;
+    background-color: transparent;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.buttonContainer .other{
+    color:  rgb(142, 86, 1);
+}
+
+#buttonMode{
+    background-color: rgb(255, 116, 23);
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100px;
+    top: -40%;
+    right: 50%;
+    border-radius:20px;
+    border: solid black 1px;
+    float: left;
+    
+}
+.lightMode{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid white 1px;
+    height: 80%;
+    width: 50%;
+    border-radius: 20px;
+    left: 5%;
+    background-color: rgb(255, 243, 200);
+}
+
+.fa-moon{
+    color: rgb(250, 158, 21);
+    font-size: 1.2em;     
+}
+.fa-sun{
+    color: rgb(255, 243, 200);
+    font-size: 1.2em;     
+}
+.darkmode{
+    left: 45%;
+    background-color: rgb(250, 158, 21);
+}
+
+.darkContainer{
+    background-color: rgb(255, 243, 200);
+}
+
+.darkBody{
+    background-color: rgb(250, 158, 21);
+}
+
+.darkCadran{
+    color: white;
+    background-color: rgba(131, 123, 90, 0.674);
+    border: rgb(4, 4, 4) solid 1px;
+}
+
+.dark-button:not(.other){
+    color: black !important;
+    border: rgba(0, 0, 0, 0.426) solid 1px;
+}
+
+.dark-text{
+    background-color: rgb(255, 243, 200);    
+}
+
+.lightMode, .darkmode, .darkContainer, .darkBody, .darkCadran, .dark-button:not(.other), body, .display, .container, .text, .dark-text, .fa-moon, .fa-sun{
+    transition: all 0.3s linear;
+}
+
+i {
+    animation: backgroundFloat 5s linear infinite;
+}
+@keyframes backgroundFloat{
+    100%{
+        transform: rotate(360deg);
+    }
+}
